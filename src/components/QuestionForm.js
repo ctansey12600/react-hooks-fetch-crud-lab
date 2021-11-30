@@ -33,6 +33,15 @@ function QuestionForm( {onAddQuestion} ) {
     })
     .then(r => r.json())
     .then(newQuestion => onAddQuestion(newQuestion))
+    
+    setFormData({
+      prompt: "",
+      answer1: "",
+      answer2: "",
+      answer3: "",
+      answer4: "",
+      correctIndex: 0,
+    })
   }
 
   return (
